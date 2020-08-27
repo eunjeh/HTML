@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+   <head>
+      <meta name = "charset" content="UTF-8">
+      <title>방명록</title>
+      <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+
+      <style type = "text/css">
+         .form{font-family:'Jua', sans-serif; font-size: 17px;text-align:center; background-image:url(back.png); z-index:3; position:relative; border:0;}
+         .st{font-weight:bold; text-shadow:1px 1px 12px orange;}
+      </style>
+      
+   </head>
+   <body class="form">
+      
+      </br><h2>방명록을 남겨주세요 :3</h2></br>
+      <form action="infoDB.php" method="get">
+         
+            <legned class="st">주인님과 어떤 관계인가요?</legned></br></br>
+            이름 : <input type="text" name="name" value="" required/><br/></br>
+            이메일 : <input type = "email" name="mail" placeholder="-------@-----.com"/><br></br>
+            관계 : 
+            <select name="relationship">
+               <option value="children">소꿉친구</option>
+               <option value="midhigh">중,고등친구</option>
+               <option value="college">대학친구</option>
+               <option value="family">가족</option>
+               <option value="lover">애인</option>
+            </select>
+      
+         <br/></br>
+         
+            <legend class="st">당신의 생일</legend></br>
+            <input type="date" name="date" />
+         
+         <br/></br>
+         
+            <legend class="st">홈페이지가 얼마나 귀여운가요?</legend></br>
+            <input type="radio" name="satisfied" value="4" checked/>매우 귀엽다
+            <input type="radio" name="satisfied" value="3"/>귀엽다
+            <input type="radio" name="satisfied" value="2"/>안귀엽다
+            <input type="radio" name="satisfied" value="1"/>매우 안귀엽다
+            <br/></br>
+            <span>개선했으면 하는 사항이 있으면 적어주세요 :) </span><br/></br>
+            <textarea name="memo" cols="50" rows="3"></textarea>
+   
+         <br/></br>
+         <input type="submit" value="확인" />&nbsp;<input type="reset" value="취소" />
+      </form>     
+
+   </body>
+</html>

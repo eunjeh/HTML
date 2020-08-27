@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html>
+   <head>
+      <meta name = "charset" content="UTF-8">
+      <title>메인 홈페이지 :3</title>
+
+      <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+      <style type = "text/css">
+         .back{z-index:1; position:absolute;border:thin solid yellow; height:980px; width:100%}        
+         h1{z-index:2; position:relative;background-color:#E9D4FF; text-align:center; padding:50px; }
+         .object{z-index:5; position:relative; font-size:17px;}
+         #aside{z-index:2;position:relative;border:0; width:17%; height:855px; background-color:#E9D4FF;font-size:25px; text-align:center;  font-family:'Jua', sans-serif;}
+         .ho:hover{color:#ffba3e; }
+         #section{border:medium solid black; position:relative; top: -860px; left:17%; width:83%; height:550px}
+         .front{z-index:5; position:relative;left:13%; border-radius:10px;}         
+         .text{z-index:5; position:relative;text-align:center; position:relative;top:30px;left:20%; border-width:0; width:60%; font-size:18px;}
+         .but{z-index:5; position:relative;left:40%; top:30px; }
+         .butex{z-index:5; position:relative; border:3px solid orange; background-color:#FFE899; width:280px; left:38%; border-radius:10px; top:30px}
+         #nav{z-index:2;border:0;position:relative; top:-705px; left:17%; width:100%; height:150px; background-color: #d4ff83}
+         a:link{color:black;}
+         a:visited{color:#ffba3e;}
+      </style>
+   </head>
+   <body style="font-family:'Jua', sans-serif">
+      <img src="back.png" class="back">
+      
+      <header><h1><img src="flower2.png" height="30" width="50">주인을 소개합니다!<img src="flower2.png" height="30" width="50"></h1></header>
+      
+      <p class="object">
+      <script type = "text/javascript">
+        var today = new Date();
+        var y = today.getFullYear();
+        var m = today.getMonth()+1;
+        var d = today.getDate();
+        var dd = today.getDay();
+        var arr = new Array("일요일","월요일","화요일","수요일","목요일","금요일","토요일");
+        document.write("오늘 날짜: " + y + "년 " + m + "월 " + d + "일 " + arr[dd] +"입니다.</br>");
+      </script></p>
+
+      <aside id ="aside">
+         <h3>&lt;주인&gt;</h3>
+         <a href="univ.html"><div class="ho">대학생활</div><br/></a>
+         <div>취미</div></br>
+         <a href="https://www.youtube.com/channel/UC74GbNMPMoLBo2SUdSRob1Q"><div class="ho" style="font-size:20px;">- 유투브 보기</div></br></a>
+         <a href="apeach.html"><div class="ho" style="font-size:20px;">- 베이비 어피치 덕질</div><br/></a>
+         <div>운동</div></br>
+         <a href="mybmi.html"><div class="ho" style="font-size:20px;">- 나의 BMI 그래프</div></a></br>
+         <a href="yourbmi.html"><div class="ho" style="font-size:20px;">- 당신의 BMI는?</div></a><br/>
+         <a href="info.html"><div class="ho">방명록</div></a></br></br>
+         <img src="under.png" height="180" width="200">
+      </aside>
+      <article>
+         <section id = "section">
+         <img class="front" src="pu1.png" height="180" width="250">&nbsp&nbsp
+         <img class="front" src="pu2.png" height="180" width="250">&nbsp&nbsp
+         <img class="front" src="pu3.png" height="180" width="250">
+         <p class="text">안녕! 나는 햄스터에요. 주인의 홈페이지에 온 걸 환영해요 ~!</br></br>먼저 나는 주인과 1년을 함께 살고 있는 골든햄스터 <strong>퓨리</strong>에요.</br></br>저는 주로 주인 손에서 낮잠을 자고 이 초록색 집에 살아요 :3 </br></br>주인에 대한 정보는 왼쪽에 보이는 카테고리를 클릭하셔서 들어가면 볼 수 있어요. 자세한 소개는 해당 페이지에서 해드릴게요!</p>
+        </br><a href="canvas.html"><img class="but" src="arbut.png" height="150" width="220"></a></br><p class="butex">동그라미를 눌러서 캔버스에서 나를 그려줘요!</p>
+         </section>
+         
+      </article>
+      <footer id = "nav">
+        [주인과 소통해요!]
+        <nav> 
+              <a href="https://www.instagram.com/rliu_s2/"><img style="margin-left:200px"src="instagram.png" height="100" width="100"></a>
+              <a href="https://www.facebook.com/100009440595475/posts/1994741034183897/"><img style="margin-left:150px"src="facebook.png" height="100" width="100"></a>
+              <img style="margin-left:150px"src="kakaotalk.png" height="100" width="100">
+              <img style="margin-left:150px"src="naver.png" height="100" width="100">
+        </nav>
+      </footer>
+    </body>
+</html>

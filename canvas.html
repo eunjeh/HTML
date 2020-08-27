@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8"/>
+      <title>햄찌 그리기 :3</title>
+    </head>
+    
+    <body id="center" onmousedown="start();" onmousemove="draw();" onmouseup="stop();">
+      <canvas id="myCanvas" width="700" height="700" style="border:thick dotted orange;"></canvas>
+
+      <script type="text/javascript">
+        var canvas = document.getElementById("myCanvas");
+        var myContext = canvas.getContext("2d");
+        var text0="<햄찌를 그려주세요>";
+        myContext.font = "bold 20pt Bating";
+        myContext.fillStyle = "#ff7e36";
+        myContext.fillText(text0, 200, 80);
+
+
+        var stopped = true;
+
+        function start() {
+            e = window.event;
+            myContext.moveTo(e.clientX-10, e.clientY-10);
+            stopped = false;
+        }
+
+        function stop() {
+            stopped = true;
+        }
+
+        function draw() {
+            if (!stopped) {
+                e = window.event;
+                myContext.lineTo(e.clientX-10, e.clientY-10);
+                myContext.stroke();
+            }
+        }
+
+      </script>
+    </body>
+</html>

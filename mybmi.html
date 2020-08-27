@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html>
+   <head>
+      <meta name = "charset" content="UTF-8">
+      <title>나의 BMI 그래프</title>
+      <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+
+      <style type = "text/css">
+         .all{font-family:'Jua', sans-serif; font-size:20px;
+         background-image:url(https://i.pinimg.com/originals/91/4a/2f/914a2f3091b7817a724286d3e20d499a.gif);}
+
+      </style>
+   </head>
+   <body class="all">
+
+      <canvas id="myCanvas" width="1500" height="700"></canvas>
+         <script type="text/javascript">
+         var canvas = document.getElementById("myCanvas");
+         var myContext = canvas.getContext("2d");
+          
+         myContext.beginPath();
+         myContext.rect(60, 150, 800, 422);
+         myContext.lineWidth = 5;
+         myContext.strokeStyle = "black";
+         myContext.lineJoin = "miter";
+         myContext.fillStyle = "white";
+         myContext.stroke();
+         myContext.fill();
+
+         var text0="주인님은 요가로 운동을 꾸준히 하고 있어요."
+         var text1 = "1/23";  var int1 = "0 - ";
+         var text2 = "2/5";   var int2 = "5 - ";
+         var text3 = "3/12";  var int3 = "10 - ";
+         var text4 = "3/28";  var int4 = "15 - ";
+         var text5 = "5/14";  var int5 = "20 - ";
+         var text6 = "5/28";  var int6 = "25 - ";
+         var text7 = "----";  var int7 = "30 - ";
+         
+         myContext.font = "bold 20pt Bating";
+         myContext.fillStyle = "black";
+         myContext.fillText(text0, 200, 80);
+         myContext.fillText(text1, 100, 610); myContext.fillText(int1, 25, 580);
+         myContext.fillText(text2, 220, 610); myContext.fillText(int2, 25, 505);
+         myContext.fillText(text3, 340, 610); myContext.fillText(int3, 10, 430);
+         myContext.fillText(text4, 460, 610); myContext.fillText(int4, 10, 360);
+         myContext.fillText(text5, 580, 610); myContext.fillText(int5, 10, 290);
+         myContext.fillText(text6, 700, 610); myContext.fillText(int6, 10, 220);
+         myContext.fillText(text7, 800, 610); myContext.fillText(int7, 10, 157);
+
+         myContext.beginPath();
+         myContext.rect(110,570-14*17.7,30,14*17.7);
+         myContext.rect(230,570-14*17,30,14*17);
+         myContext.rect(350,570-14*18.2,30,14*18.2);
+         myContext.rect(590,570-14*17.3,30,14*17.3);
+         myContext.strokeStyle = "rgb(109,179,218)";
+         myContext.fillStyle = "rgb(109,179,218)";
+         myContext.stroke();
+         myContext.fill();
+
+         myContext.beginPath();
+         myContext.rect(470,570-14*18.7,30,14*18.7);
+         myContext.rect(710,570-14*18.5,30,14*18.5);
+         myContext.strokeStyle = "rgb(80,167,62)";
+         myContext.fillStyle = "rgb(80,167,62)";
+         myContext.stroke();
+         myContext.fill();
+
+         myContext.beginPath();
+         myContext.rect(810,570-14*22,30,14*22);
+         myContext.strokeStyle = "rgb(80,167,62)";
+         myContext.fillStyle = "white";
+         myContext.stroke();
+         myContext.fill();
+
+
+          var imgObj = new Image();
+          imgObj.src = "bmirange.png";
+          imgObj.onload = function() {
+          myContext.drawImage(imgObj, 910, 570,550,110);
+         }
+
+         var imgObj2 = new Image();
+          imgObj2.src = "arbmi.png";
+          imgObj2.onload = function() {
+          myContext.drawImage(imgObj2, 60, 10,120,120);
+         }
+         </script>
+
+                 
+   </body>
+</html>

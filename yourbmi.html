@@ -1,0 +1,131 @@
+﻿<!doctype html>
+<html>
+   <head>
+      <meta name = "charset" content="UTF-8">
+      <title>당신의 BMI는?</title>
+      <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+
+      <style type = "text/css">
+         .all{font-family:'Jua', sans-serif; font-size:20px;
+         background-image:url(https://i.pinimg.com/originals/91/4a/2f/914a2f3091b7817a724286d3e20d499a.gif);}
+      </style>
+   </head>
+   <body class="all">
+      <img style="margin-left:350px" src="youcal.png" width="120" height="120" onclick="Event();"/>
+      
+      <canvas id="myCanvas" width="1500" height="600"></canvas>
+         <script type="text/javascript">
+         var canvas = document.getElementById("myCanvas");
+         var myContext = canvas.getContext("2d");
+          
+         myContext.beginPath();
+         myContext.rect(80, 100, 700, 422);
+         myContext.lineWidth = 5;
+         myContext.strokeStyle = "black";
+         myContext.lineJoin = "miter";
+         myContext.fillStyle = "white";
+         myContext.stroke();
+         myContext.fill();
+
+         var text0="당신의 BMI를 계산해줄게요! 계산기 이미지를 클릭해보세요."
+         var text1 = "Your BMI";  
+         var text2="계산기 이미지를 클릭해보세요."
+         var int1 = "0 - ";
+         var int2 = "5 - ";
+         var int3 = "10 - ";
+         var int4 = "15 - ";
+         var int5 = "20 - ";
+         var int6 = "25 - ";
+         var int7 = "30 - ";
+         
+         myContext.font = "bold 20pt Bating";
+         myContext.fillStyle = "black";
+         myContext.fillText(text0, 80, 60);
+         myContext.fillText(text1, 120, 560); 
+         myContext.fillText(int1, 45, 520);
+         myContext.fillText(int2, 45, 460);
+         myContext.fillText(int3, 30, 380);
+         myContext.fillText(int4, 30, 310);
+         myContext.fillText(int5, 30, 240);
+         myContext.fillText(int6, 30, 170);
+         myContext.fillText(int7, 30, 107);
+
+          var imgObj = new Image();
+          imgObj.src = "bmirange.png";
+          imgObj.onload = function() {
+          myContext.drawImage(imgObj, 910, 400,550,110);
+         }
+
+          function Event(){
+            var weight = prompt("당신의 몸무게를 입력해주세요.(kg단위)");
+            var height = prompt("당신의 키를 입력해주세요.(cm단위)");
+            BMI(weight,height);
+         }
+         function BMI(wei,hei){
+            var bmi = (wei/(hei/100*hei/100));
+            
+            if(bmi>=30){
+               myContext.beginPath();
+               myContext.rect(160,520-14*bmi,30,14*bmi);
+               myContext.strokeStyle = "rgb(209,33,36)";
+               myContext.fillStyle = "rgb(209,33,36)";
+               myContext.stroke();
+               myContext.fill();
+
+               var text3="당신은 현재 [비만]상태 입니다. 운동하세요!"
+               myContext.font = "bold 20pt Bating";
+               myContext.fillStyle = "rgb(209,33,36)";
+               myContext.fillText(text3, 250, 350);
+
+            }
+            else if ((bmi>=25)&&(bmi<=29.9)){
+               myContext.beginPath();
+               myContext.rect(160,520-14*bmi,30,14*bmi);
+               myContext.strokeStyle = "rgb(239,147,10)";
+               myContext.fillStyle = "rgb(239,147,10)";
+               myContext.stroke();
+               myContext.fill();
+
+               var text3="당신은 현재 [과체중]상태 입니다. 조심하세요!"
+               myContext.font = "bold 20pt Bating";
+               myContext.fillStyle = "rgb(239,147,10)";
+               myContext.fillText(text3, 250, 350);
+            }
+            else if ((bmi>=18.5)&&(bmi<=24.9)){
+               myContext.beginPath();
+               myContext.rect(160,520-14*bmi,30,14*bmi);
+               myContext.strokeStyle = "rgb(77,169,62)";
+               myContext.fillStyle = "rgb(77,169,62)";
+               myContext.stroke();
+               myContext.fill();
+
+               var text3="당신은 [정상]입니다^^"
+               myContext.font = "bold 20pt Bating";
+               myContext.fillStyle = "rgb(77,169,62)";
+               myContext.fillText(text3, 250, 350);
+            }
+            else{
+               myContext.beginPath();
+               myContext.rect(160,520-14*bmi,30,14*bmi);
+               myContext.strokeStyle = "rgb(109,179,218)";
+               myContext.fillStyle = "rgb(109,179,218)";
+               myContext.stroke();
+               myContext.fill();
+
+               var text3="당신은 현재 [저체중]상태입니다. 많이 드세요!"
+               myContext.font = "bold 20pt Bating";
+               myContext.fillStyle = "rgb(109,179,218)";
+               myContext.fillText(text3, 250, 280);
+
+            }
+                
+                
+        }
+
+         
+        
+      </script>
+
+                 
+   </body>
+</html>
